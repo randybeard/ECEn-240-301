@@ -15,7 +15,7 @@ void setup() {
   
   // set up the pins
   pinMode(LED, OUTPUT);
-  doTurnLedOff(LED);  // turn the LED off at the beginning
+  turnLedOff(LED);  // turn the LED off at the beginning
 }
 
 /********************************************************************
@@ -39,14 +39,14 @@ void fsmButtonForLed()  {
       // state transition logic
       if (isButtonPushed(BUTTON)==TRUE){
         state = 1; // if button is pushed, go to state 1
-        doTurnLedOn(LED);  // but first turn LED on
+        turnLedOn(LED);  // but first turn LED on
       }
       break;
     case 1:  // LED is on
       // state transition logic
       if (isButtonPushed(BUTTON)==FALSE){ 
         state = 0; // if putton is not pushed, go to state 0
-        doTurnLedOff(LED);  // but first turn LED off
+        turnLedOff(LED);  // but first turn LED off
       }
       break;
   }
@@ -57,7 +57,7 @@ void fsmButtonForLed()  {
  ********************************************************************/
 // Function that tests if button is pushed
 int isButtonPushed(int button_pin) {
-  float button_voltage = doGetPinVoltage(button_pin);
+  float button_voltage = getPinVoltage(button_pin);
   
   //Serial.println(button_voltage);  // use this to plot button voltage
   if (/* need a condition here */){
@@ -73,18 +73,18 @@ int isButtonPushed(int button_pin) {
  * functions that take actions
  ********************************************************************/
 // Function to turn LED on
-void doTurnLedOn(int led_pin) {
+void turnLedOn(int led_pin) {
   // add some code to turn LED on
 }
 
 // Function to turn LED off
-void doTurnLedOff(int led_pin) {
+void turnLedOff(int led_pin) {
   // add some codde to turn LED off
 }
 
 ////////////////////////////////////////////////////////////////////
 // Function to read pin voltage
-float doGetPinVoltage(int pin) {
+float getPinVoltage(int pin) {
   // This function can be used for many different tasks in the labs:
   // study this line of code to understand what is going on!!
   // Q: What does analogRead(pin) do?
