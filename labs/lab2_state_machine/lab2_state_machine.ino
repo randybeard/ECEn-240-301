@@ -13,11 +13,6 @@
 #define BUTTON_COLLISION A2
 #define TRUE 1
 #define FALSE 0
-#define RIGHT 1
-#define LEFT -1
-#define CENTER 100
-#define UP 1
-#define DOWN -1
 
 /********************************************************************
  * setup function - this gets executed at power up, or after a reset
@@ -56,6 +51,9 @@ void robotBrain() {
 int fsmCollisionDetection() {  
   static int state = 0;
   //Serial.println(state);  // use this for debugging
+  // There are two states in this state machine:
+  //    state==0 means that the sensor does not detect a collision
+  //    state==1 means that the sensor detects a collision
   switch (state) {
     case 0:  // no obstacle
       // state machine that steers robot:  only call this when there is no collision
@@ -80,6 +78,11 @@ int fsmCollisionDetection() {
 // State machine for steering the robot accordingly.
 int fsmSteerRobot() {
   static int state = 0;
+  // There are two states in this state machine:
+  //    state==0 means that no light is detected
+  //    state==1 means that the light is in front of the robot
+  //    state==2 means that the light is to the right of the robot 
+  //    state==3 means that the light is to the left of the robot
   switch (state) {
     case 0:  // no light detected in front of robot, don't move robot
       // Put your action code here
@@ -98,7 +101,7 @@ int fsmSteerRobot() {
     case 1:  // light detected in front of robot
       // Put your action code here
 
-      // state transition logic
+      // add state transition logic
       if () {
         state = 0;  
       }
@@ -112,7 +115,7 @@ int fsmSteerRobot() {
     case 2:  // light is on right of robot
       // Put your action code here
 
-      // state transition logic
+      // add state transition logic
       if () {
         state = 0;  
       }
@@ -126,7 +129,7 @@ int fsmSteerRobot() {
     case 3:  // light is on left of robot
       // Put your action code here
 
-      // state transition logic
+      // add state transition logic
       if () {
         state = 0;  
       }
@@ -169,6 +172,22 @@ int isCollision() {
     output = FALSE;
   }
   return( output );
+}
+
+////////////////////////////////////////////////////////////////////
+// Function that detects if the light is in front of the robot
+int isLightFront() {
+  // This is where you add code that tests if both the BUTTON_LIGHT_LEFT
+  // and the BUTTON_LIGHT_RIGHT button have been pushed.  
+  // In lab 5 you will add photo diodes to detect the light, and 
+  // you will need to modify this function accordingly.
+
+  if ( /* need a condition here*/ ) {
+    return(TRUE);
+  }
+  else {
+    return (FALSE);
+  }  
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -238,7 +257,7 @@ int isLightDown() {
 ////////////////////////////////////////////////////////////////////
 // Function that drives the robot staight:
 // Both wheels move at same speed.
-void doDriveRobot(int curve) {
+void driveRobot(int curve) {
   if (curve==0) {  // go straight
     // this is where you add code to turn on the LED_STRAIGHT led
     // In lab 6, you will add code that makes the robot drive straight
