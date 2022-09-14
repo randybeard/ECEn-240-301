@@ -1,13 +1,9 @@
 #include "Arduino.h"
 
 // compiler define functions: the compiler replaces name with number
-#define LED_SERVO_UP 6  // replace the pin numbers with those you connect 
-#define LED_SERVO_DOWN 2
 #define LED_TURN_RIGHT 5
 #define LED_TURN_LEFT 3
 #define LED_STOP 7
-#define BUTTON_LIGHT_TOP A0
-#define BUTTON_LIGHT_BOTTOM A4
 #define BUTTON_LIGHT_RIGHT A1
 #define BUTTON_LIGHT_LEFT A3
 #define BUTTON_COLLISION A2
@@ -41,7 +37,6 @@ void loop() {
  ********************************************************************/
 void robotBrain() {
   fsmCollisionDetection();  // always check for collision. 
-  fsmPointSensor();  // point sensor even when there is a collision
 }
 
 /********************************************************************
@@ -144,16 +139,6 @@ int fsmSteerRobot() {
   return(state);
 }
 
-///////////////////////////////////////////////////
-// State machine for pointing the light sensor
-int fsmPointSensor() {
-  static int state = 0;
-  switch (state) {
-      // put the state machine code here
-  }
-  return(state);
-}
-
 
 /********************************************************************
  * functions that test different conditions
@@ -222,37 +207,6 @@ int isLightRight() {
   }  
 }
 
-////////////////////////////////////////////////////////////////////
-// Function that detects if the light is above center
-int isLightUp() {
-  // This is where you add code that tests if the BUTTON_LIGHT_TOP button 
-  // has been pushed.  
-  // In lab 5 you will add photo diodes to detect the light, and 
-  // you will need to modify this function accordingly.
-
-  if ( /* need a condition here*/ ) {
-    return(TRUE);
-  }
-  else {
-    return (FALSE);
-  }    
-}
-
-////////////////////////////////////////////////////////////////////
-// Function that detects if the light is below center
-int isLightDown() {
-  // This is where you add code that tests if the BUTTON_LIGHT_BOTTOM button 
-  // has been pushed.  
-  // In lab 5 you will add photo diodes to detect the light, and 
-  // you will need to modify this function accordingly.
-
-  if ( /* need a condition here*/ ) {    
-    return(TRUE);
-  }
-  else {
-    return (FALSE);
-  }  
-}
 
 ////////////////////////////////////////////////////////////////////
 // Function that drives the robot staight:
