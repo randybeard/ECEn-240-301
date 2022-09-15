@@ -34,6 +34,7 @@ void robotBrain() {
 /********************************************************************
  * state machines
  ********************************************************************/
+////////////////////////////////////////////////////////////////////
 // state machine for collision avoidance
 int fsmCollisionDetection() {  
   static int state = 0;
@@ -61,15 +62,15 @@ int fsmCollisionDetection() {
   return(state);
 }
 
-
 /********************************************************************
  * functions that test different conditions
  ********************************************************************/
+////////////////////////////////////////////////////////////////////
 // Function that detects if there is an obstacle in front of robot
 int isCollision() {
   // This is where you add code that tests if the BUTTON_COLLISION button 
   // has been pushed.  
-  // In lab 6 you will add a sonar sensor to detect collision and 
+  // Later in the semester you will add a sonar sensor to detect collision and 
   // the code for the sonar sensor will go in this function
 
   if (/* need a condition here*/) {  
@@ -81,22 +82,7 @@ int isCollision() {
   return( output );
 }
 
-
 ////////////////////////////////////////////////////////////////////
-// Function that drives the robot staight:
-// Both wheels move at same speed.
-void driveRobot() {
-  // add code here to turn off the LED
-  // you will modify this code in milestone 2
-}
-
-////////////////////////////////////////////////////////////////////
-// Function that causes that causes the robot to stop moving.
-void stopRobot() {
-  // this is where you add code to turn on all of the leds
-  // In lab 6, you will add code that makes the robot stop moving
-}
-
 // Function that tests if button is pushed
 int isButtonPushed(int button_pin) {
   float button_voltage = getPinVoltage(button_pin);
@@ -110,15 +96,32 @@ int isButtonPushed(int button_pin) {
   }
 }
 
-
 /********************************************************************
  * functions that take actions
  ********************************************************************/
+////////////////////////////////////////////////////////////////////
+// Function that drives the robot staight:
+// Both wheels move at same speed.
+void driveRobot() {
+  // add code here to turn off the LED
+  // you will modify this code in milestone 2
+  // Later in the semester, you will add code that moves the robot
+}
+
+////////////////////////////////////////////////////////////////////
+// Function that causes that causes the robot to stop moving.
+void stopRobot() {
+  // this is where you add code to turn on all of the leds
+  // Later in the semester, you will add code that makes the robot stop moving
+}
+
+////////////////////////////////////////////////////////////////////
 // Function to turn LED on
 void turnLedOn(int led_pin) {
   // add some code to turn LED on
 }
 
+////////////////////////////////////////////////////////////////////
 // Function to turn LED off
 void turnLedOff(int led_pin) {
   // add some codde to turn LED off
