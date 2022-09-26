@@ -17,8 +17,6 @@ void setup() {
   // set up serial connection at 9600 Baud
   Serial.begin(9600);
   // set up the pins
-  pinMode(LED_SERVO_UP, OUTPUT);
-  pinMode(LED_SERVO_DOWN, OUTPUT);
   pinMode(LED_TURN_RIGHT, OUTPUT);
   pinMode(LED_TURN_LEFT, OUTPUT);
   pinMode(LED_STOP, OUTPUT);  
