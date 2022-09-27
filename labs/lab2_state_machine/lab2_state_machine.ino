@@ -272,11 +272,23 @@ void driveRobot(int curve) {
   }
 }
 
-////////////////////////////////////////////////////////////////////
+// Function that causes that causes the robot to stop moving.
+void startRobot() {
+  // this is where you add code to turn the collision led off
+}
+
 // Function that causes that causes the robot to stop moving.
 void stopRobot() {
-  // this is where you add code to turn on all of the leds
+  // this is where you add code to turn on the collision led
   // In lab 6, you will add code that makes the robot stop moving
+}
+
+// Function to move sensor up
+void moveSensorUp() {
+}
+
+// Function to move sensor down
+void moveSensorDown() {
 }
 
 // Function that tests if button is pushed
