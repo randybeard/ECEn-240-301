@@ -74,12 +74,11 @@ int isCollision() {
   // the code for the sonar sensor will go in this function
 
   if (/* need a condition here*/) {  
-    output = TRUE;
+    return( TRUE );
   }
   else {
-    output = FALSE;
+    return( FALSE );
   }
-  return( output );
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -111,7 +110,7 @@ void driveRobot() {
 ////////////////////////////////////////////////////////////////////
 // Function that causes that causes the robot to stop moving.
 void stopRobot() {
-  // this is where you add code to turn on all of the leds
+  // this is where you add code to turn on the collision led
   // Later in the semester, you will add code that makes the robot stop moving
 }
 
