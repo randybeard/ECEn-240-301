@@ -84,7 +84,7 @@ int fsmSteerRobot() {
       if (isLightFront()==TRUE) {
         state = 1;  // light detected in front of robot, go to state 1
       }
-      if (isLightRight()==TRUE) { 
+      else if (isLightRight()==TRUE) { 
         state = 2;   // light on right of robot, go to state 2
       }
       else if (isLightLeft()==TRUE) { 
@@ -98,7 +98,7 @@ int fsmSteerRobot() {
       if () {
         state = 0;  
       }
-      if () { 
+      else if () { 
         state = 2;   
       }
       else if () { 
@@ -112,7 +112,7 @@ int fsmSteerRobot() {
       if () {
         state = 0;  
       }
-      if () { 
+      else if () { 
         state = 1;  
       }
       else if () { 
@@ -126,7 +126,7 @@ int fsmSteerRobot() {
       if () {
         state = 0;  
       }
-      if () { 
+      else if () { 
         state = 1;  
       }
       else if () { 
@@ -149,12 +149,11 @@ int isCollision() {
   // the code for the sonar sensor will go in this function
 
   if (/* need a condition here*/) {  
-    output = TRUE;
+    return( TRUE );
   }
   else {
-    output = FALSE;
+    return( FALSE );
   }
-  return( output );
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -227,7 +226,7 @@ void driveRobot(int curve) {
 ////////////////////////////////////////////////////////////////////
 // Function that causes that causes the robot to stop moving.
 void stopRobot() {
-  // this is where you add code to turn on all of the leds
+  // this is where you add code to turn on the collision led
   // In lab 6, you will add code that makes the robot stop moving
 }
 
