@@ -46,7 +46,7 @@ The class is organized around eight units.  Class material associated with each
 ## Labs
   * [Lab 1:  Introduction to Arduino](https://docs.google.com/presentation/d/1ukaFBsBhOwfAEMFgzm6Ieby5M9mqaDBqiGLIyXCt7Lg/edit?usp=sharing)
   * [Lab2:  State machine for light following robot](https://docs.google.com/presentation/d/1Ix_8ddyyGQLGZtGz0txIiUo_Minmk6wUbptybTgdAQs/edit?usp=sharing)
-  * [Lab 3:  Battery pack, and battery voltage indicator](https://docs.google.com/presentation/d/1bRNqjw3a6zD_Y3cUu_lPnDKNUE5umjfIw2C8jvXlpt0/edit?usp=sharing)
+  * [Lab 3:  Robot body and power system](https://docs.google.com/presentation/d/1bRNqjw3a6zD_Y3cUu_lPnDKNUE5umjfIw2C8jvXlpt0/edit?usp=sharing)
   * [Lab 4:  Capacitive proximity sensor](https://docs.google.com/presentation/d/1Z2bpe1TZhNaA8LBdgujU0i7IolfK-QtRwRkokd6RL24/edit?usp=sharing)
   * [Lab 5:  Light direction finder](https://docs.google.com/presentation/d/1wSx2OFlLH3TO9DeCfRdZftI9dApcQ05J3uZ1rJw_IPI/edit?usp=sharing)
   * [Lab 6:  Light Following Robot](https://docs.google.com/presentation/d/179IEi2TGgbwu7aiGNaS6mono3YWzSwouteQAAfrAf-4/edit?usp=sharing)
