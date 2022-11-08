@@ -80,14 +80,14 @@ int fsmSteerRobot() {
     case 0:  // no light detected in front of robot, don't move robot
       // Put your action code here
 
-      // state transition logic
-      if (isLightFront()==TRUE) {
+       // state transition logic
+      if ((isLight(BUTTON_LIGHT_RIGHT)==TRUE)&&(isLight(BUTTON_LIGHT_LEFT)==TRUE)) {
         state = 1;  // light detected in front of robot, go to state 1
       }
-      else if (isLightRight()==TRUE) { 
+      if (isLight(BUTTON_LIGHT_RIGHT)==TRUE) { 
         state = 2;   // light on right of robot, go to state 2
       }
-      else if (isLightLeft()==TRUE) { 
+      else if (isLight(BUTTON_LIGHT_LEFT)==TRUE) { 
         state = 3; // light on left of robot, go to state 3
       }
       break;
@@ -157,53 +157,20 @@ int isCollision() {
 }
 
 ////////////////////////////////////////////////////////////////////
-// Function that detects if the light is in front of the robot
-int isLightFront() {
-  // This is where you add code that tests if both the BUTTON_LIGHT_LEFT
-  // and the BUTTON_LIGHT_RIGHT button have been pushed.  
-  // In lab 5 you will add photo diodes to detect the light, and 
-  // you will need to modify this function accordingly.
-
-  if ( /* need a condition here*/ ) {
-    return(TRUE);
-  }
-  else {
-    return (FALSE);
-  }  
-}
-
-////////////////////////////////////////////////////////////////////
-// Function that detects if the light is to the left of center
-int isLightLeft() {
-  // This is where you add code that tests if the BUTTON_LIGHT_LEFT button 
+// Function that detects if the light is present
+int isLight(int pin) {
+  // This is where you add code that tests if the BUTTON_LIGHT_LEFT (etc.) button 
   // has been pushed.  
   // In lab 5 you will add photo diodes to detect the light, and 
   // you will need to modify this function accordingly.
 
-  if ( /* need a condition here*/ ) {
+  if ( isButtonPushed(pin)==TRUE ) {
     return(TRUE);
   }
   else {
     return (FALSE);
   }  
 }
-
-////////////////////////////////////////////////////////////////////
-// Function that detects if the light is to the right of center
-int isLightRight() {
-  // This is where you add code that tests if the BUTTON_LIGHT_RIGHT button 
-  // has been pushed.  
-  // In lab 5 you will add photo diodes to detect the light, and 
-  // you will need to modify this function accordingly.
-
-  if ( /* need a condition here*/ ) {
-    return(TRUE);
-  }
-  else {
-    return (FALSE);
-  }  
-}
-
 
 ////////////////////////////////////////////////////////////////////
 // Function that drives the robot staight:
