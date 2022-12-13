@@ -177,7 +177,6 @@ int isLight(int pin) {
 // Both wheels move at same speed.
 void driveRobot(int curve) {
   if (curve==0) {  // go straight
-    // this is where you add code to turn on the LED_STRAIGHT led
     // In lab 6, you will add code that makes the robot drive straight
   }
   else if (curve>0) {  // curve right
