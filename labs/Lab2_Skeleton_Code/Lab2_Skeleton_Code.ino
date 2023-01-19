@@ -177,8 +177,8 @@ void loop() {
     Serial.print("Perception:");
     Serial.print(SensedLightUp);
     Serial.print(SensedLightLeft);
-    Serial.print(SensedLightRight); 
     Serial.print(SensedCollision);
+    Serial.print(SensedLightRight); 
     Serial.print(SensedLightDown);
 //    Serial.print(SensedCapacitiveTouch); - Lab 4
   }
