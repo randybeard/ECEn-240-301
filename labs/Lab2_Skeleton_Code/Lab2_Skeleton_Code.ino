@@ -93,8 +93,8 @@ your sensors and servos. */
 // Motor speed definitions - Lab 4
 
 // Collision definitions
-#define COLLISION_OFF 0
-#define COLLISION_ON  1
+#define COLLISION_ON   0
+#define COLLISION_OFF  1
 
 // Driving direction definitions
 #define DRIVE_STOP      0
