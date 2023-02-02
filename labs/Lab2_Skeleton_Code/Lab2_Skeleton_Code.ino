@@ -38,7 +38,7 @@ your sensors and servos. */
 #define BUTTON_4  A5     // Right middle button - Right Motor
 #define BUTTON_5  A6     // Far right button - Servo Down
 
-// LED pins
+// LED pins (note that digital pins do not need "D" in front of them)
 #define LED_1   6       // Far Left LED - Servo Up
 #define LED_2   5       // Left Middle LED  - Left Motor
 #define LED_3   4       // Middle LED - Collision
@@ -503,11 +503,11 @@ void MoveServo() {
 // Function to turn LED on
 void doTurnLedOn(int led_pin)
 {
-  /* Use knowledge from lab 1 to set the led_pin on */
+  /* Use knowledge from lab 1 to set the led_pin to turn the LED on */
 }
 
 // Function to turn LED off
 void doTurnLedOff(int led_pin)
 {
-  /* Use knowledge from lab 1 to set the led_pin high */
+  /* Use knowledge from lab 1 to set the led_pin to turn the LED off */
 }
