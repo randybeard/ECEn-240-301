@@ -354,7 +354,6 @@ void fsmSteerRobot() {
   /* Get rid of this whole line for milestone 2
   switch (steerRobotState) {
     case 0: //light is not detected
-      //The light is straight ahead, drive straight
       ActionRobotDrive = DRIVE_STOP;
       
       //State transition logic
