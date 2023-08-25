@@ -1,4 +1,4 @@
-# ECEn301
+# ECEn 240/301
 
 The class is organized around eight units.  Class material associated with each unit is contained in the google slide decks listed below. 
 
