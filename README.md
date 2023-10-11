@@ -17,7 +17,7 @@ The class is organized around eight units.  Class material associated with each
   * [Lecture 10: Node voltage and supernodes](http://docs.google.com/presentation/d/1Tn9IfzV5IjjnYYKNPsrcOtme1MCSyZyGH0P_cef8i7w/edit?usp=sharing)
   * [Lecture 11: R-2R ladders, digital-to-analog conversion (DAC)](http://docs.google.com/presentation/d/10NdlfT6oi4HEoETUO3GNTShT5L5WgSl8vokM4smZ2tQ/edit?usp=sharing)
 ## Unit 4.  (Inductors, Capacitors, and ADC / DAC) 
-  * [Lecture 12:  Inductors and Capcitors](http://docs.google.com/presentation/d/1XS10c0wCKa-1_-Pb8IVLbBW5d3aZTUSPreTnV8oJ8qg/edit?usp=sharing)
+  * [Lecture 12:  Inductors and Capcitors](https://docs.google.com/presentation/d/1cN6PcGvuIPJYwE8F4iq7-mXxBneyFXkHhiMFgD_STms/edit?usp=sharing))
   * [Lecture 13:  Transient response of first order circuits](http://docs.google.com/presentation/d/1gBiu_5xk7Yo6hQZZ-ctw6JY71CXmfOw2-zaJ-WcKZx0/edit?usp=sharing)
   * [Lecture 14: Analog-to-digital conversion (ADC)](http://docs.google.com/presentation/d/1BOUqK2FCSh7vdVOlZZUwr6g2hoNMn2miwc4StONKvv8/edit?usp=sharing)
   * [Lecture 15:  PWM.  DAC on Arduino, Measuring Capacitance](http://docs.google.com/presentation/d/1xPRbAETOjIi8Gs069o9RCkIW-J8ANYKdtjt9IoI373c/edit?usp=sharing)
