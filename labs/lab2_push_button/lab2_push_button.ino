@@ -93,3 +93,21 @@ float getPinVoltage(int pin) {
   // Q: Why multiply by 5.0?  
   return( 5.0 * ( (float) analogRead(pin) ) / 1024.0 );
 }
+
+#define LED 2
+#define BUTTON A0
+#define TRUE 1
+#define FALSE 0
+
+void setup() {
+  // set up the pins
+  pinMode(LED, OUTPUT);
+  turnLedOff(LED);  // turn the LED off at the beginning
+}
+
+void loop() {
+  // state machine to detect collisions
+  fsmButtonForLed();
+}
+
+

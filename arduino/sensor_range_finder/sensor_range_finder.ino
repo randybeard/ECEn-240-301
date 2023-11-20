@@ -8,9 +8,9 @@ void setup(void) {
 }
 
 void loop() {
-  //long duration = getDurationRaw();
-  //Serial.println(duration);
-  //;float distance = getDistanceRaw();
+//  long duration = getDurationRaw();
+//  Serial.println(duration);
+  //float distance = getDistanceRaw();
   //Serial.println(distance);
   float distance = getDistanceSmoothed();
   Serial.println(distance);  
@@ -23,8 +23,7 @@ float getDistanceSmoothed() {
   // only update if measurement is close to current estimate
   // this is called a measurement gate
   if (abs(distance-distanceSmoothed)<10) {
-    distanceSmoothed = alpha*distanceSmoothed
-          + (1-alpha)*distance;
+      distanceSmoothed = alpha*distanceSmoothed + (1-alpha)*distance;
   }
   return(distanceSmoothed);
 }

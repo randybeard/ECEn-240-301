@@ -1,4 +1,5 @@
 #include "DHT.h"
+//#include Bonezegei_DHT11.h"
 #define DHT_PIN 5 // Digital pin
 #define DHT_TYPE DHT11   // DHT 11
 
