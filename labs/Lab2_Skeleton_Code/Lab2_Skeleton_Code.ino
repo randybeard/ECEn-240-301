@@ -181,6 +181,7 @@ void loop() {
     Serial.print(SensedLightRight); 
     Serial.print(SensedLightDown);
 //    Serial.print(SensedCapacitiveTouch); - Lab 4
+    Serial.print("\t");
   }
   
   RobotPlanning(); // PLANNING
@@ -188,10 +189,12 @@ void loop() {
     Serial.print(" Action:");
     Serial.print(ActionCollision);
     Serial.print(ActionRobotDrive); 
-//    Serial.print(ActionRobotSpeed); - Lab 4
-    Serial.println(ActionServoMove);
+    Serial.print(ActionServoMove);
+    //    Serial.print(" "); Serial.print(ActionRobotSpeed); - Lab 4
+    Serial.print("\t");
   }
   RobotAction(); // ACTION
+  Serial.print("\n");
 }
 
 /**********************************************************************************************************
@@ -204,7 +207,7 @@ void RobotPerception() {
 
   
   // Photodiode Sensing
-  //Serial.println(getPinVoltage(BUTTON_2)); //uncomment for debugging
+  //Serial.print(getPinVoltage(BUTTON_2)); Serial.print("\t"); //uncomment for debugging
   
   /* Delete this whole line for milestone 2
   if (isButtonPushed(BUTTON_2)){
@@ -308,7 +311,7 @@ void RobotPlanning(void) {
 ////////////////////////////////////////////////////////////////////
 void fsmCollisionDetection() {
   static int collisionDetectionState = 0;
-  //Serial.println(collisionDetectionState); //uncomment for debugging
+  //Serial.print(collisionDetectionState); Serial.print("\t"); //uncomment for debugging
   
   switch (collisionDetectionState) {
     case 0: //collision detected
@@ -349,7 +352,7 @@ void fsmCollisionDetection() {
 ////////////////////////////////////////////////////////////////////
 void fsmSteerRobot() {
   static int steerRobotState = 0;
-  //Serial.println(steerRobotState); //uncomment for debugging
+  //Serial.print(steerRobotState); Serial.print("\t"); //uncomment for debugging
 
   /* Get rid of this whole line for milestone 2
   switch (steerRobotState) {
@@ -407,7 +410,7 @@ void fsmSteerRobot() {
 ////////////////////////////////////////////////////////////////////
 void fsmMoveServoUpAndDown() {
   static int moveServoState = 0;
-  //Serial.println(moveServoState); //uncomment for debugging
+  //Serial.print(moveServoState); Serial.print("\t"); //uncomment for debugging
   
   // Milestone 3
   //Create a state machine modeled after the ones in milestones 1 and 2
