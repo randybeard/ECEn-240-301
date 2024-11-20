@@ -188,8 +188,9 @@ void loop() {
     Serial.print(" Action:");
     Serial.print(ActionCollision);
     Serial.print(ActionRobotDrive); 
-//    Serial.print(ActionRobotSpeed); - Lab 4
-    Serial.println(ActionServoMove);
+    Serial.print(ActionServoMove);
+    //    Serial.print(" "); Serial.print(ActionRobotSpeed); - Lab 4
+    Serial.print("\n");
   }
   RobotAction(); // ACTION
 }
