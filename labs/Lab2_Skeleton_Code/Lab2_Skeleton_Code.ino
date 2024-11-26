@@ -2,7 +2,7 @@
   ECEN 240/301 Lab Code
   Light-Following Robot
 
-  The approach of this code is to use an architectured that employs
+  The approach of this code is to use an architecture that employs
   three different processes:
     Perception
     Planning
@@ -14,7 +14,7 @@
 
 
   Version History
-  1.1.3       11 January 2023   Creation by Dr. Mazzeo and TAs from 2022 version
+  1.1.4       25 November 2024   Updated from 1.1.3, which was created by Dr. Mazzeo and TAs from 2022 version
 
  ********************************************************************/
 
@@ -85,7 +85,7 @@ your sensors and servos. */
 
 
 /***********************************************************/
-// Defintions that allow one to set states
+// Definitions that allow one to set states
 // Sensor state definitions
 #define DETECTION_NO    0
 #define DETECTION_YES   1
@@ -114,7 +114,7 @@ your sensors and servos. */
 // Collision (using Definitions)
 int SensedCollision = DETECTION_NO;
 
-// Photodiode inputs (using Definitions) - The button represent the photodiodes for lab 2
+// Photodiode inputs (using Definitions) - The buttons represent the photodiodes for lab 2
 int SensedLightRight = DETECTION_NO;
 int SensedLightLeft = DETECTION_NO;
 int SensedLightUp = DETECTION_NO;
@@ -132,7 +132,7 @@ int ActionCollision = COLLISION_OFF;
 
 // Main motors Action (using Definitions)
 int ActionRobotDrive = DRIVE_STOP;
-// Add speed action in Lab 4
+// Add speed Action in Lab 4
 
 // Servo Action (using Definitions)
 int ActionServoMove =  SERVO_MOVE_STOP;
